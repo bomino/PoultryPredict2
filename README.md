@@ -1,276 +1,230 @@
 # Poultry Weight Predictor 🐔
 
-A sophisticated machine learning application built with Streamlit for predicting poultry weight based on environmental and feeding data. This tool helps poultry farmers and researchers make data-driven decisions using multiple advanced machine learning models and comprehensive analysis tools.
+A sophisticated machine learning application built with Streamlit for predicting poultry weight based on environmental and feeding data. This tool helps poultry farmers and researchers make data-driven decisions using advanced machine learning models and comprehensive analysis tools.
 
-## Features
+## ✨ Features
 
-### 1. Data Management
-- **Data Upload**:
-  - CSV file upload support
-  - Automated data validation and preprocessing
-  - Dynamic data type handling
-  - Missing value detection
-  - Column validation
-  - Range checking
+### 📊 Data Management
+- **Smart Upload System**
+  - CSV file upload with validation
+  - Automatic data type detection
+  - Quality assessment
+  - Error detection and reporting
+  - Template generation
 
-- **Data Preprocessing**:
-  - Automatic data cleaning
-  - Feature scaling
-  - Multi-level outlier detection
-  - Comprehensive data validation
+- **Advanced Analysis**
+  - Comprehensive outlier detection
   - Feature correlation analysis
-  - Statistical analysis
+  - Time series visualization
+  - Statistical summaries
+  - Data quality metrics
 
-### 2. Model Training
-- **Multiple Models Support**:
-  - Polynomial Regression (for baseline and simple patterns)
-  - Gradient Boosting Regressor (for complex patterns)
+### 🤖 Machine Learning
+- **Multiple Models Support**
+  - Polynomial Regression (for simple patterns)
+  - Gradient Boosting (for complex patterns)
   - Support Vector Regression (for robust predictions)
-  - Extensible architecture for future models
 
-- **Model Configuration**:
-  - Dynamic parameter settings
-  - Model-specific parameter validation
-  - Interactive parameter tuning
-  - Cross-validation support
-  - Early stopping capabilities
-  - Performance metrics tracking
-  - Training metadata capture
+- **Intelligent Model Selection**
+  - Automated model recommendations
+  - Data-driven suggestions
+  - Performance-based guidance
+  - Optimization tips
 
-- **Training Features**:
-  - Configurable train/test split
-  - Advanced cross-validation
+- **Training Features**
+  - Cross-validation
   - Feature importance analysis
-  - Performance visualization
+  - Performance monitoring
+  - Early stopping
   - Model persistence
-  - Training history
 
-### 3. Model Comparison
-- **Comparison Metrics**:
+### 📈 Predictions & Analysis
+- **Flexible Prediction Options**
+  - Single-value predictions
+  - Batch processing
+  - Real-time updates
+  - Confidence metrics
+
+- **Interactive Visualizations**
+  - Performance comparisons
+  - Feature importance charts
+  - Error analysis
+  - Time series plots
+
+### 🔄 Model Comparison
+- **Comprehensive Metrics**
   - Mean Squared Error (MSE)
   - Root Mean Squared Error (RMSE)
   - R-squared (R²) Score
   - Mean Absolute Error (MAE)
   - Mean Absolute Percentage Error (MAPE)
+
+- **Visual Comparisons**
+  - Side-by-side analysis
+  - Performance charts
   - Feature importance comparison
-  - Cross-validation scores
+  - Error distribution
 
-- **Visualization Tools**:
-  - Interactive performance plots
-  - Feature importance charts
-  - Prediction comparison graphs
-  - Error analysis visualizations
-  - Residual plots
-  - Correlation heatmaps
-
-### 4. Prediction Capabilities
-- **Flexible Input Methods**:
-  - Single prediction through UI
-  - Batch predictions via CSV
-  - Real-time prediction updates
-  - Input validation
-  - Range checking
-
-- **Output Features**:
-  - Detailed prediction analysis
-  - Confidence metrics
-  - Error estimates
-  - Exportable results
-  - Prediction history tracking
-  - Performance monitoring
-
-## Installation
+## 🚀 Quick Start
 
 ### Prerequisites
 - Python 3.9+
 - pip package manager
 - Virtual environment (recommended)
-- Git (for version control)
 
-### Setup
-
-1. Clone the repository:
+### Installation
 ```bash
-git clone https://github.com/bomino/PoultryPredict.git
+# Clone repository
+git clone https://github.com/bomino/PoultryPredict2.git
 cd PoultryPredict
-```
 
-2. Create and activate a virtual environment:
-```bash
-# Windows
+# Create virtual environment
 python -m venv venv
-venv\Scripts\activate
 
-# Linux/Mac
-python -m venv venv
-source venv/bin/activate
-```
+# Activate environment
+venv\Scripts\activate  # Windows
+source venv/bin/activate  # Linux/Mac
 
-3. Install required packages:
-```bash
+# Install requirements
 pip install -r requirements.txt
-```
 
-4. Run the application:
-```bash
+# Launch application
 streamlit run app/main.py
 ```
 
-## Project Structure
-```
-poultry_weight_predictor/
-│
-├── app/
-│   ├── main.py                  # Application entry point
-│   │
-│   ├── pages/
-│   │   ├── 1_Data_Upload.py       # Data upload and validation
-│   │   ├── 2_Data_Analysis.py     # Data analysis and visualization
-│   │   ├── 3_Model_Training.py    # Model training and evaluation
-│   │   ├── 4_Predictions.py       # Prediction interface
-│   │   ├── 5_Model_Comparison.py  # Model comparison tools
-│   │   └── 6_About.py            # About and documentation
-│   │
-│   ├── models/
-│   │   ├── model_factory.py       # Model creation and management
-│   │   ├── polynomial_regression.py# Polynomial regression model
-│   │   ├── gradient_boosting.py   # Gradient boosting model
-│   │   └── svr_model.py          # Support Vector Regression model
-│   │
-│   ├── utils/
-│   │   ├── data_processor.py      # Data processing utilities
-│   │   ├── visualizations.py      # Visualization functions
-│   │   └── model_comparison.py    # Model comparison utilities
-│   │
-│   └── config/
-│       └── settings.py            # Application settings
-│
-├── models/                      # Saved models directory
-├── tests/                      # Unit tests
-├── Documentation.md            # Detailed documentation
-├── QUICK_START.md             # Quick start guide
-├── requirements.txt           # Project dependencies
-└── README.md                  # Project documentation
-```
+## 📋 Data Requirements
 
-## Usage Guide
-
-### 1. Data Preparation
-Required CSV format:
+Your CSV file needs these columns:
 ```csv
 Int Temp,Int Humidity,Air Temp,Wind Speed,Feed Intake,Weight
-29.87,59,29.6,4.3,11.00,42.39
-32.50,47,30.5,4.3,12.47,45.67
+29.5,65,28.0,3.2,120,1500
 ```
 
-### 2. Model Training
-1. Upload data in the Data Upload page
-2. Analyze data quality and features
-3. Navigate to Model Training
-4. Select appropriate model type
-5. Configure parameters
-6. Train model
-7. Review results and save model
+### Required Columns
+| Column       | Description       | Unit | Range    |
+|-------------|------------------|------|----------|
+| Int Temp    | House Temperature | °C   | 15-40    |
+| Int Humidity| House Humidity    | %    | 30-90    |
+| Air Temp    | Outside Temp      | °C   | 10-45    |
+| Wind Speed  | Wind Speed       | m/s  | 0-15     |
+| Feed Intake | Feed Consumed    | g    | > 0      |
+| Weight      | Poultry Weight   | g    | > 0      |
 
-### 3. Making Predictions
-- **Single Prediction**:
-  1. Enter values manually
-  2. Validate inputs
-  3. Get instant prediction
-  4. Review confidence metrics
+## 💡 Usage Guide
 
-- **Batch Prediction**:
-  1. Upload CSV file
-  2. Validate data
-  3. Get predictions for all rows
-  4. Download results
+### 1. Data Upload
+- Upload your CSV file
+- Review validation results
+- Check data quality metrics
+- Address any issues flagged
 
-### 4. Model Comparison
-1. Train multiple models
-2. Visit Model Comparison page
-3. Compare performance metrics
-4. Analyze feature importance
-5. Export comparison report
+### 2. Data Analysis
+- Explore data distributions
+- Check feature relationships
+- Identify outliers
+- Review correlations
+- Analyze time series patterns
 
-## Configuration
+### 3. Model Training
+- Review model recommendations
+- Select appropriate model
+- Configure parameters
+- Train and validate
+- Compare performance
 
-### Model Parameters
+### 4. Making Predictions
+- Choose prediction method
+- Input or upload data
+- Get predictions with confidence
+- Export results
 
-1. Polynomial Regression:
-   - Degree
-   - Include bias
-   - Fit intercept
+## 🛠️ Advanced Features
 
-2. Gradient Boosting:
-   - Number of estimators
-   - Learning rate
-   - Maximum depth
-   - Minimum samples split
-   - Early stopping rounds
-   - Validation fraction
+### Model Selection System
+The application analyzes your data and recommends the best model based on:
+- Dataset size
+- Presence of outliers
+- Data complexity
+- Feature relationships
+- Performance requirements
 
-3. Support Vector Regression:
-   - Kernel type
-   - Regularization parameter (C)
-   - Epsilon
-   - Gamma
-   - Cache size
+### Cross-Validation
+- Configurable validation splits
+- Performance metrics across folds
+- Stability assessment
+- Overfitting detection
 
-## Best Practices
+### Feature Importance
+- Feature ranking
+- Impact analysis
+- Visual representation
+- Comparative analysis
 
-1. **Data Quality**:
-   - Clean data thoroughly
-   - Handle outliers appropriately
-   - Maintain consistent units
-   - Validate ranges
+## 📚 Documentation
 
-2. **Model Selection**:
-   - Start with simpler models
-   - Use recommendations
-   - Compare multiple approaches
-   - Consider dataset size
+For detailed information, see:
+- [Documentation.md](Documentation.md) - Comprehensive guide
+- [QUICK_START.md](QUICK_START.md) - Getting started guide
 
-3. **Training Process**:
-   - Use cross-validation
-   - Monitor metrics
-   - Enable early stopping
-   - Document settings
-
-4. **Prediction Workflow**:
-   - Validate inputs
-   - Monitor accuracy
-   - Keep prediction logs
-   - Review confidence metrics
-
-## Contributing
+## 🤝 Contributing
 
 1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
+2. Create your feature branch:
+   ```bash
+   git checkout -b feature/AmazingFeature
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m 'Add some AmazingFeature'
+   ```
+4. Push to the branch:
+   ```bash
+   git push origin feature/AmazingFeature
+   ```
 5. Open a Pull Request
 
-## License
+## 💪 Best Practices
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+### Data Preparation
+- Clean your data thoroughly
+- Remove obvious outliers
+- Ensure consistent units
+- Validate value ranges
 
-## Acknowledgments
+### Model Selection
+- Start with recommended model
+- Compare multiple approaches
+- Monitor performance
+- Document settings
+
+### Making Predictions
+- Validate input data
+- Check confidence metrics
+- Keep prediction logs
+- Monitor accuracy
+
+## 🆘 Support
+
+Need help? Check:
+- Documentation
+- Issue tracker
+- Feature requests
+- Email: Bomino@mlawali.com
+
+## 📜 License
+
+This project is licensed under the MIT License - see [LICENSE](LICENSE) for details.
+
+## 🙏 Acknowledgments
 
 - Built with Streamlit
-- Uses scikit-learn for machine learning
+- Uses scikit-learn
 - Plotly for visualizations
 - Pandas for data handling
-- NumPy for numerical operations
-- Joblib for model persistence
-
-## Support
-
-For support:
-- Check the documentation
-- Review troubleshooting guide
-- Open an issue
-- Contact: Bomino@mlawali.com
 
 ---
 
 Made with ❤️ for poultry farmers and researchers
+
+![GitHub stars](https://img.shields.io/github/stars/bomino/PoultryPredict2?style=social)
+![GitHub forks](https://img.shields.io/github/forks/bomino/PoultryPredict2?style=social)
