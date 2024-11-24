@@ -1,182 +1,195 @@
 # Quick Start Guide 🚀
 
-## Setting Up Poultry Weight Predictor
+Welcome to the Poultry Weight Predictor! This guide will help you get started quickly with the application.
 
-### 1. First Time Setup
+## 1. Installation & Setup ⚙️
+
+### Quick Setup
 ```bash
 # Clone repository
-git clone https://github.com/bomino/PoultryPredict.git
+git clone https://github.com/bomino/PoultryPredict2.git
+cd PoultryPredict2
 
-# Navigate to project
-cd PoultryPredict
-
-# Create virtual environment
+# Set up environment
 python -m venv venv
-
-# Activate environment
 venv\Scripts\activate  # Windows
 source venv/bin/activate  # Linux/Mac
 
-# Install requirements
+# Install dependencies
 pip install -r requirements.txt
 
-# Start application
+# Launch application
 streamlit run app/main.py
 ```
 
-### 2. Prepare Your Data
-Your CSV file should include:
-```csv
+## 2. Data Preparation 📊
+
+### Required Format
+Your CSV file must include these columns:
+```
 Int Temp,Int Humidity,Air Temp,Wind Speed,Feed Intake,Weight
-29.87,59,29.6,4.3,11.00,42.39
+29.5,65,28.0,3.2,120,1500
 ```
 
-Required columns:
-- `Int Temp`: Internal Temperature (°C)
-- `Int Humidity`: Internal Humidity (%)
-- `Air Temp`: Air Temperature (°C)
-- `Wind Speed`: Wind Speed (m/s)
-- `Feed Intake`: Feed Intake (g)
-- `Weight`: Weight (g) - for training only
+### Column Descriptions
+| Column       | Unit | Description           | Valid Range |
+|-------------|------|----------------------|-------------|
+| Int Temp    | °C   | House temperature    | 15-40       |
+| Int Humidity| %    | House humidity       | 30-90       |
+| Air Temp    | °C   | Outside temperature  | 10-45       |
+| Wind Speed  | m/s  | Wind speed          | 0-15        |
+| Feed Intake | g    | Daily feed consumed  | > 0         |
+| Weight      | g    | Poultry weight      | > 0         |
 
-Data quality requirements:
-- No missing values
-- Numerical values only
-- Values within reasonable ranges
-- Consistent units
-- Clean formatting
+## 3. Using the Application 🎯
 
-### 3. Using the Application
+### Step 1: Data Upload
+1. Navigate to "📤 Data Upload"
+2. Click "Browse files"
+3. Select your CSV file
+4. Review data preview
+5. Check validation results
 
-#### a. Data Upload & Analysis
-1. Click "Browse files"
-2. Select your CSV file
-3. Review data preview and summary
-4. Check data quality metrics
-5. Analyze feature relationships
-6. Review outlier detection results
+### Step 2: Data Analysis
+1. Go to "📊 Data Analysis"
+2. Explore:
+   - Time Series Analysis
+   - Feature Relationships
+   - Outlier Detection
+3. Review data quality metrics
+4. Identify potential issues
 
-#### b. Model Training
-1. Select model type:
-   - Polynomial Regression (for simple patterns)
-   - Gradient Boosting (for complex patterns)
-   - Support Vector Regression (for robust predictions)
-2. Configure model parameters
-3. Set test split size
-4. Enable advanced options if needed:
-   - Cross-validation
-   - Early stopping (for Gradient Boosting)
-5. Click "Train Model"
-6. Review comprehensive results
+### Step 3: Model Training
+1. Visit "🎯 Model Training"
+2. Review model recommendation
+   - System analyzes your data
+   - Suggests best model
+   - Provides reasoning
+3. Choose model type:
+   - Polynomial Regression (simple patterns)
+   - Gradient Boosting (complex patterns)
+   - SVR (robust predictions)
+4. Configure settings:
+   - Basic parameters
+   - Advanced options (if needed)
+5. Train model
+6. Review results
 
-#### c. Making Predictions
-1. Choose input method:
-   - Manual Input: Enter values directly
-   - Batch Prediction: Upload CSV file
-2. Enter/upload prediction data
-3. Get predictions with confidence metrics
-4. Validate results
-5. Download predictions
+### Step 4: Make Predictions
+1. Go to "🔮 Make Predictions"
+2. Choose method:
+   - Single Prediction: Manual input
+   - Batch Prediction: CSV upload
+3. Enter/upload data
+4. Get predictions
+5. Download results
 
-#### d. Model Comparison
-1. Train multiple models
-2. Visit comparison page
-3. Review detailed metrics
-4. Compare feature importance
-5. Export comprehensive report
+### Step 5: Compare Models (Optional)
+1. Navigate to "📊 Model Comparison"
+2. Review metrics
+3. Compare performances
+4. Export reports
 
-### 4. Troubleshooting
+## 4. Quick Tips 💡
 
-Common issues and solutions:
+### Data Quality
+✅ Use complete data
+✅ Check for outliers
+✅ Ensure consistent units
+✅ Validate ranges
+❌ Avoid missing values
+❌ Don't mix units
 
-1. **Data Upload Errors**
-   - Check column names match exactly
-   - Ensure all values are numeric
-   - Remove any special characters
-   - Verify data types
-   - Check for hidden whitespace
+### Model Selection
+✅ Start with recommended model
+✅ Consider data size
+✅ Review outlier analysis
+❌ Don't ignore recommendations
+❌ Don't overcomplicate
 
-2. **Training Errors**
-   - Verify data quality
-   - Check parameter ranges
-   - Ensure sufficient data
-   - Monitor for overfitting
-   - Check system resources
+### Training Process
+✅ Start with default parameters
+✅ Enable cross-validation
+✅ Monitor performance
+❌ Don't overfit
+❌ Don't skip validation
 
-3. **Prediction Errors**
-   - Validate input ranges
-   - Verify data format
-   - Check model training status
-   - Review feature consistency
-   - Ensure proper scaling
+### Making Predictions
+✅ Validate inputs
+✅ Check confidence metrics
+✅ Document results
+❌ Don't extrapolate
+❌ Don't ignore warnings
 
-4. **Model Performance Issues**
-   - Start with simpler models
-   - Tune hyperparameters
-   - Use cross-validation
-   - Enable early stopping
-   - Check for data quality issues
+## 5. Common Issues & Solutions 🔧
 
-### 5. Best Practices
+### Data Upload Issues
+- **Issue**: File format error
+  - **Fix**: Check CSV format
+  - **Fix**: Verify column names
 
-1. **Data Preparation**
-   - Clean your data thoroughly
-   - Handle outliers appropriately
-   - Use consistent units
-   - Document preprocessing steps
-   - Validate data ranges
+- **Issue**: Validation failures
+  - **Fix**: Check data ranges
+  - **Fix**: Remove invalid values
 
-2. **Model Selection**
-   - Consider dataset size
-   - Evaluate data complexity
-   - Start with simpler models
-   - Use model recommendations
-   - Compare multiple approaches
+### Training Issues
+- **Issue**: Poor performance
+  - **Fix**: Try recommended model
+  - **Fix**: Adjust parameters
 
-3. **Model Training**
-   - Start with default parameters
-   - Use cross-validation
-   - Monitor performance metrics
-   - Document optimal settings
-   - Save best models
+- **Issue**: Slow training
+  - **Fix**: Reduce complexity
+  - **Fix**: Use appropriate model
 
-4. **Making Predictions**
-   - Stay within training ranges
-   - Validate unusual results
-   - Keep prediction logs
-   - Monitor performance
-   - Use confidence metrics
+### Prediction Issues
+- **Issue**: Unreasonable predictions
+  - **Fix**: Check input ranges
+  - **Fix**: Validate model
 
-### 6. Getting Help
+- **Issue**: Low confidence
+  - **Fix**: Review data quality
+  - **Fix**: Retrain if needed
 
-If you need assistance:
+## 6. Getting Help 🆘
+
+Need assistance?
 1. Check error messages
 2. Review documentation
-3. Check troubleshooting guide
-4. Review best practices
-5. Open an issue on GitHub
+3. Check troubleshooting section
+4. Open GitHub issue
+5. Contact support: Bomino@mlawali.com
 
-### 7. Quick Tips
+## 7. Next Steps 🎓
 
-1. **Data Quality**
-   - Use the provided template
-   - Check for outliers first
-   - Review feature correlations
-   - Validate ranges before training
+After getting started:
+1. Read full documentation
+2. Explore advanced features
+3. Optimize your models
+4. Automate predictions
+5. Export and share results
 
-2. **Model Selection**
-   - Use Polynomial Regression for small datasets
-   - Try Gradient Boosting for complex patterns
-   - Use SVR when robustness is key
-   - Compare multiple models
+## 8. Best Practices Summary ✨
 
-3. **Performance Optimization**
-   - Enable cross-validation
-   - Use early stopping
-   - Monitor training metrics
-   - Review feature importance
-   - Document best configurations
+1. **Data Management**
+   - Keep data organized
+   - Document preprocessing
+   - Maintain consistent formats
+   - Regular backups
+
+2. **Model Development**
+   - Follow recommendations
+   - Start simple
+   - Validate thoroughly
+   - Document settings
+
+3. **Production Use**
+   - Regular retraining
+   - Performance monitoring
+   - Result validation
+   - Error logging
 
 ---
 
-For detailed information, see [Documentation.md](Documentation.md)
+For detailed information, see:
+- [Documentation.md](Documentation.md)
+- [README.md](README.md)
