@@ -26,18 +26,31 @@ def app():
        - Pattern detection and visualization
        - Comprehensive outlier analysis across features
        - Interactive data exploration tools
+                
+      3. **Intelligent Model Selection**
+       - Automated model recommendations based on:
+         * Dataset size and characteristics
+         * Presence of outliers
+         * Data complexity
+         * Feature relationships
+       - Detailed reasoning for each recommendation
+       - Alternative model suggestions
+       - Parameter optimization guidance
+       - Performance expectations
+       - Use case considerations
 
-    3. **Machine Learning Models**
-       - Multiple model support:
-         * Polynomial Regression (for baseline linear and non-linear patterns)
-         * Gradient Boosting (for complex pattern recognition)
-         * Support Vector Regression (for robust predictions)
+    4. **Machine Learning Models**
+       - Multiple model support with intelligent selection:
+         * Polynomial Regression (recommended for small, clean datasets)
+         * Gradient Boosting (recommended for large, complex datasets)
+         * Support Vector Regression (recommended for datasets with outliers)
        - Automated feature importance analysis
        - Model persistence and versioning
        - Cross-validation capabilities
        - Early stopping for appropriate models
+       - Smart parameter suggestions
 
-    4. **Model Training and Evaluation**
+    5. **Model Training and Evaluation**
        - Interactive parameter tuning
        - Real-time performance metrics
        - Feature importance visualization
@@ -45,7 +58,7 @@ def app():
        - Model saving and loading functionality
        - Comprehensive training metadata tracking
 
-    5. **Predictions**
+    6. **Predictions**
        - Single prediction through manual input
        - Batch predictions through CSV upload
        - Prediction history tracking
@@ -54,7 +67,7 @@ def app():
        - Performance monitoring
        - Prediction validation
 
-    6. **Model Comparison**
+    7. **Model Comparison**
        - Side-by-side model performance comparison
        - Comparative metrics visualization
        - Feature importance comparison across models
